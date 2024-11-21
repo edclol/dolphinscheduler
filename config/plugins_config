@@ -44,6 +44,7 @@ dolphinscheduler-datasource-databend
 dolphinscheduler-datasource-db2
 dolphinscheduler-datasource-doris
 dolphinscheduler-datasource-hana
+dolphinscheduler-datasource-cache
 dolphinscheduler-datasource-hive
 dolphinscheduler-datasource-k8s
 dolphinscheduler-datasource-kyuubi

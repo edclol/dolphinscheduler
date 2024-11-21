@@ -493,6 +493,11 @@ export const datasourceType: IDataBaseOptionKeys = {
     label: 'K8S',
     defaultPort: 6443
   },
+  CACHE: {
+    value: 'CACHE',
+    label: 'CACHE',
+    defaultPort: 1972
+  },
   ALIYUN_SERVERLESS_SPARK: {
     value: 'ALIYUN_SERVERLESS_SPARK',
     label: 'ALIYUN_SERVERLESS_SPARK',

@@ -42,6 +42,7 @@ type IDataBase =
   | 'ZEPPELIN'
   | 'SAGEMAKER'
   | 'K8S'
+  | 'CACHE'
   | 'ALIYUN_SERVERLESS_SPARK'
 
 type IDataBaseLabel =
@@ -66,6 +67,7 @@ type IDataBaseLabel =
   | 'ZEPPELIN'
   | 'SAGEMAKER'
   | 'K8S'
+  | 'CACHE'
   | 'ALIYUN_SERVERLESS_SPARK'
 
 interface IDataSource {

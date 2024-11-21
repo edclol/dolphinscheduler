@@ -356,6 +356,10 @@ export default {
                                 link: '/en-us/docs/dev/user_doc/guide/datasource/doris.html',
                             },
                             {
+                                title: 'Caché',
+                                link: '/en-us/docs/dev/user_doc/guide/datasource/cache.html',
+                            },
+                            {
                                 title: 'Vertica',
                                 link: '/en-us/docs/dev/user_doc/guide/datasource/vertica.html',
                             }
