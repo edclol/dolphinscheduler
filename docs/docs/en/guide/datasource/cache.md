@@ -18,6 +18,12 @@
 
 ## Native Supported
 
-No, read section example in [datasource-setting](../installation/datasource-setting.md) `DataSource Center` section to activate
-this datasource.
+Yes, could use this datasource by default.
 
+## Data Source Information
+
+> InterSystems Caché® is a high-performance database that powers transaction processing applications around the world. It is used for everything from mapping a billion stars in the Milky Way, to processing a billion equity trades in a day, to managing smart energy grids.
+
+For more Caché related documentation, please refer to
+[Official Website](https://www.intersystems.com/products/cache/)
+[Official Documentation](https://docs.intersystems.com/latest/csp/docbook/DocBook.UI.Page.cls?KEY=BGJD_coding)

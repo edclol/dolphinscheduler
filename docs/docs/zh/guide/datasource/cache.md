@@ -14,4 +14,14 @@
 
 ## 是否原生支持
 
-否，使用前需请参考 [数据源配置](../installation/datasource-setting.md) 中的 "数据源中心" 章节激活数据源。
+是，数据源不需要任务附加操作即可使用。
+
+## 数据源信息
+
+> InterSystems Caché® 是一款高性能数据库，
+> 为全球交易处理应用程序提供支持。它用于各种用途，
+> 从绘制银河系十亿颗恒星的地图，到一天处理十亿笔股票交易，再到管理智能电网。
+
+更多的Caché相关文档，请参考
+[官方网站](https://www.intersystems.com/products/cache/)
+[官方文档](https://docs.intersystems.com/latest/csp/docbook/DocBook.UI.Page.cls?KEY=BGJD_coding)
