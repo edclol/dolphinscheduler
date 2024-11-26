@@ -21,6 +21,7 @@ import org.apache.dolphinscheduler.common.constants.DataSourceConstants;
 import org.apache.dolphinscheduler.plugin.datasource.api.utils.PasswordUtils;
 import org.apache.dolphinscheduler.spi.enums.DbType;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -124,6 +125,22 @@ class CacheDataSourceProcessorTest {
             Assertions.assertEquals("cache@root@123456@jdbc:Cache://localhost:1972/default",
                     cacheDataSourceProcessor.getDatasourceUniqueId(mysqlConnectionParam, DbType.CACHE));
         }
+    }
+
+    @Test
+    void testGetHostPortSplit() {
+        String address = "jdbc:Cache://localhost:1972";
+        String[] expected = {"localhost", "1972"};
+        String[] result = CacheDataSourceProcessor.getHostPortSplit(address);
+        Assertions.assertArrayEquals(expected, result);
+    }
+
+    @Test
+    void testGetHostPortSplit_InvalidFormat() {
+        String invalidAddress = "invalid-format";
+        String[] hostPortSplit = CacheDataSourceProcessor.getHostPortSplit(invalidAddress);
+        Assertions.assertEquals("[invalid-format]", Arrays.toString(hostPortSplit));
+
     }
 
 }

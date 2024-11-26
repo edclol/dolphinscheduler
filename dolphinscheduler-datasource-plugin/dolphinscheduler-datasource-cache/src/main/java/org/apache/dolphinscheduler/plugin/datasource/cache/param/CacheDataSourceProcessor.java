@@ -59,12 +59,30 @@ public class CacheDataSourceProcessor extends AbstractDataSourceProcessor {
         mysqlDatasourceParamDTO.setUserName(connectionParams.getUser());
         mysqlDatasourceParamDTO.setDatabase(connectionParams.getDatabase());
         String address = connectionParams.getAddress();
-        String[] hostSeperator = address.split(Constants.DOUBLE_SLASH);
-        String[] hostPortArray = hostSeperator[hostSeperator.length - 1].split(Constants.COMMA);
-        mysqlDatasourceParamDTO.setPort(Integer.parseInt(hostPortArray[0].split(Constants.COLON)[1]));
-        mysqlDatasourceParamDTO.setHost(hostPortArray[0].split(Constants.COLON)[0]);
-
+        try {
+            String[] hostPortSplit = getHostPortSplit(address);
+            mysqlDatasourceParamDTO.setPort(Integer.parseInt(hostPortSplit[1]));
+            mysqlDatasourceParamDTO.setHost(hostPortSplit[0]);
+        } catch (NumberFormatException e) {
+            log.error("Invalid port number", e);
+        }
         return mysqlDatasourceParamDTO;
+    }
+
+    public static String[] getHostPortSplit(String address) {
+        String[] hostSeperator = address.split(Constants.DOUBLE_SLASH);
+        if (hostSeperator.length < 2) {
+            log.error("Invalid address format");
+        }
+        String[] hostPortArray = hostSeperator[hostSeperator.length - 1].split(Constants.COMMA);
+        if (hostPortArray.length < 1) {
+            log.error("Invalid hostPortArray format");
+        }
+        String[] hostPortSplit = hostPortArray[0].split(Constants.COLON);
+        if (hostPortSplit.length < 2) {
+            log.error("Invalid hostPortSplit format");
+        }
+        return hostPortSplit;
     }
 
     @Override
