@@ -1,6 +1,6 @@
 # CACHE
 
-![cache](../../../../img/new_ui/dev/datasource/cache.png)
+![cache](../../../../img/new_ui/dev/datasource/cache-en.png)
 
 ## Datasource Parameters
 
